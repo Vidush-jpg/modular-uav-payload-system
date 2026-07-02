@@ -41,17 +41,19 @@ and GND. A 10-100 uF bulk capacitor across payload 5V and GND is also useful.
 Install **DHT sensor library by Adafruit** and **Adafruit Unified Sensor** using
 Arduino IDE Library Manager.
 
-The sketches share `firmware/libraries/UavPayload`. Install that folder as a
-local Arduino library, or compile from the repository with Arduino CLI using
-`--libraries firmware/libraries`.
+The sketches share `prototypes/arduino_uno_r4/firmware/libraries/UavPayload`.
+Install that folder as a local Arduino library, or compile from the repository
+root with Arduino CLI using
+`--libraries prototypes/arduino_uno_r4/firmware/libraries`.
 
 Open Serial Monitor at 115200 baud and use the sketches in this order:
 
-1. Upload `firmware/eeprom_programmer_dht22/eeprom_programmer_dht22.ino` once.
+1. Upload `prototypes/arduino_uno_r4/firmware/eeprom_programmer_dht22/eeprom_programmer_dht22.ino` once.
    Confirm that read-back verification passes.
-2. Upload `firmware/payload_descriptor_decoder/payload_descriptor_decoder.ino`
+2. Upload `prototypes/arduino_uno_r4/firmware/payload_descriptor_decoder/payload_descriptor_decoder.ino`
    to independently inspect and validate the stored descriptor.
-3. Upload `firmware/backplane_controller/backplane_controller.ino`. It detects
+3. Upload `prototypes/arduino_uno_r4/firmware/backplane_controller/backplane_controller.ino`.
+   It detects
    the EEPROM, validates the descriptor, selects the DHT22 driver, and reports
    measurements every two seconds.
 
