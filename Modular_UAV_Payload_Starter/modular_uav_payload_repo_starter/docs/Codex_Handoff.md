@@ -539,6 +539,12 @@ Create Arduino code that:
 
 ## Suggested Repository Structure
 
+> Current organization note: all Arduino Uno R4 proof-of-concept firmware now
+> lives under `prototypes/arduino_uno_r4/firmware`, with its prototype-specific
+> documentation under `prototypes/arduino_uno_r4/docs`. The `raspberry_pi`
+> directory is reserved for the main companion-computer implementation. The
+> older tree below records the original planning proposal.
+
 ```text
 Modular-UAV/
 ├── README.md
